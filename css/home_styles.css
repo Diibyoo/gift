@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff66b2;
+    padding: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 36px;
+}
+
+#gift-box {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.section {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    max-width: 400px;
+}
+
+.section:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px); /* Apply background blur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 4px solid rgb(192, 215, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-width: 100%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 1000px;
+    height: 500px;
+    border: none;
+}
+
+
+.image-container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    overflow: hidden;
+}
+
+#shaking-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+#shaking-image:hover {
+    transform: translateX(-5px); /* Adjust the amount of shake */
+    animation: shake 0.5s ease infinite; /* Add a shake animation */
+}
+
+@keyframes shake {
+    0% { transform: translateX(-5px); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border: 2px solid rgb(253, 183, 195);
+    border-radius: 10px;
+    background-color: rgb(220, 43, 255);
+    color: white;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: rgb(96, 220, 243);
+    transform: scale(1.05); /* Scale up when hovered */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+} 
